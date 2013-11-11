@@ -77,7 +77,7 @@ end
 def getversion()
   theVersion = "0.0.0"
 
-  f = File.open("/System/Library/Extensions/Soundflower.kext/Contents/Info.plist", "r")
+  f = File.open("#{@svn_root}/Build/Soundflower.kext/Contents/Info.plist", "r")
   str = f.read
   theVersion = str.match(/<key>CFBundleShortVersionString<\/key>\n.*<string>(.*)<\/string>/).captures[0]
   f.close
@@ -101,8 +101,8 @@ cmd("mkdir -pv \"#{@build_folder}\"")                     # now make a clean one
 
 puts "  Building Package -- this could take a while..."
 cmd("rm -rfv \"#{@svn_root}/Installers/Soundflower.pkg\"")
-#cmd("/Developer/usr/bin/packagemaker --verbose --root \"#{@svn_root}/Installer/root\" --id com.cycling74.soundflower --out \"#{@svn_root}/Installer/Soundflower/Soundflower.pkg\" --version #{@version} --title Soundflower --resources \"#{@svn_root}/Installer/Resources\" --target 10.4 --domain system --root-volume-only")
-cmd("/Developer/usr/bin/packagemaker --verbose --doc \"#{@svn_root}/Installer/Soundflower.pmdoc\" --out \"#{@build_folder}/Soundflower.pkg\" ")
+#cmd("/Developer/usr/bin/PackageMaker --verbose --root \"#{@svn_root}/Installer/root\" --id com.cycling74.soundflower --out \"#{@svn_root}/Installer/Soundflower/Soundflower.pkg\" --version #{@version} --title Soundflower --resources \"#{@svn_root}/Installer/Resources\" --target 10.4 --domain system --root-volume-only")
+cmd("/Developer/usr/bin/PackageMaker.app/Contents/MacOS/PackageMaker --verbose --doc \"#{@svn_root}/Installer/Soundflower.pmdoc\" --out \"#{@build_folder}/Soundflower.pkg\" ")
 
 puts "  Copying readme, license, etc...."
 cmd("cp \"#{@svn_root}/License.txt\" \"#{@build_folder}\"")

@@ -224,7 +224,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
 				PRODUCT_NAME = Soundflower;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -252,7 +252,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
 				PRODUCT_NAME = Soundflower;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
