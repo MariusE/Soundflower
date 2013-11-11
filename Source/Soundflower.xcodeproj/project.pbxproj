@@ -16,6 +16,7 @@
 /* Begin PBXFileReference section */
 		00F55081007288EA11FF4F98 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
 		2249EC7E0ED70C7E003C8357 /* Soundflower.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Soundflower.xcconfig; sourceTree = "<group>"; };
+		32256D46182ECBBF001D85A3 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
 		54D0ADA60A5E329B006380BD /* Soundflower.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Soundflower.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		789FB3540D62DE4E00C0F5C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C93407620601317E002E6A19 /* SoundflowerDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SoundflowerDevice.h; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 				2249EC7E0ED70C7E003C8357 /* Soundflower.xcconfig */,
 				247142CAFF3F8F9811CA285C /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
+				32256D44182ECBBF001D85A3 /* Frameworks */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 				00F55081007288EA11FF4F98 /* Kernel.framework */,
 			);
@@ -72,6 +74,22 @@
 				C93407640601317E002E6A19 /* SoundflowerEngine.cpp */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		32256D44182ECBBF001D85A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32256D45182ECBBF001D85A3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32256D45182ECBBF001D85A3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32256D46182ECBBF001D85A3 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +133,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 548AD6D309CE873500241D17 /* Build configuration list for PBXProject "Soundflower" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -126,6 +144,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* SampleAudioDriver */;
 			projectDirPath = "";
@@ -172,17 +191,17 @@
 		548AD6D409CE873500241D17 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Development;
 		};
 		548AD6D509CE873500241D17 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "Info-SoundflowerDriver.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Deployment;
 		};
@@ -190,18 +209,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2249EC7E0ED70C7E003C8357 /* Soundflower.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(PROJECT_DIR)";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_GROUP = "$(GROUP)";
 				INSTALL_OWNER = "$(USER)";
 				INSTALL_PATH = /../Build;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
 				PRODUCT_NAME = Soundflower;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -215,17 +238,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2249EC7E0ED70C7E003C8357 /* Soundflower.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(PROJECT_DIR)";
 				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_GROUP = "$(GROUP)";
 				INSTALL_OWNER = "$(USER)";
 				INSTALL_PATH = /../Build;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
 				PRODUCT_NAME = Soundflower;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",

@@ -12,6 +12,7 @@ require 'pathname'
 require 'rexml/document'
 include REXML
 
+
 # This finds our current directory, to generate an absolute path for the require
 libdir = "."
 Dir.chdir libdir        # change to libdir so that requires work
@@ -47,30 +48,30 @@ Open3.popen3("xcodebuild -project Soundflower.xcodeproj -target SoundflowerDrive
 end
 
 
-if /BUILD SUCCEEDED/.match(out)
-  puts "    BUILD SUCCEEDED"
-  puts `ruby #{@svn_root}/Tools/load.rb`
-else
-  puts "    BUILD FAILED"
-end
+# if /BUILD SUCCEEDED/.match(out)
+#   puts "    BUILD SUCCEEDED"
+#   puts `ruby #{@svn_root}/Tools/load.rb`
+# else
+#   puts "    BUILD FAILED"
+# end
 
 
 ###################################################################
 
-puts "  Building the new Soundflowerbed.app with Xcode"
+# puts "  Building the new Soundflowerbed.app with Xcode"
 
-Dir.chdir("#{@source_sfb}")
-Open3.popen3("xcodebuild -project Soundflowerbed.xcodeproj -target Soundflowerbed -configuration #{configuration} clean build") do |stdin, stdout, stderr|
-  out = stdout.read
-  err = stderr.read
-end
+# Dir.chdir("#{@source_sfb}")
+# Open3.popen3("xcodebuild -project Soundflowerbed.xcodeproj -target Soundflowerbed -configuration #{configuration} clean build") do |stdin, stdout, stderr|
+#   out = stdout.read
+#   err = stderr.read
+# end
 
 
-if /BUILD SUCCEEDED/.match(out)
-  puts "    BUILD SUCCEEDED"
-else
-  puts "    BUILD FAILED"
-end
+# if /BUILD SUCCEEDED/.match(out)
+#   puts "    BUILD SUCCEEDED"
+# else
+#   puts "    BUILD FAILED"
+# end
 
 
 ###################################################################
