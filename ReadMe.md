@@ -1,3 +1,9 @@
+#Hinweis:
+aktuell ist der Code nicht signiert! Daher muss die .kext manuell geladen werden:
+
+`sudo kextload /System/Library/Extensions/Soundflower.kext`
+
+========
 #Changelog
 ## Version 0.1-alpha
 - Soundflower 1.6.2 forked
