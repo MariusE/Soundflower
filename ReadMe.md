@@ -1,3 +1,15 @@
+#Changelog
+## Version 0.1-alpha
+- Soundflower 1.6.2 forked
+- xCode Project updated
+	- SDK 10.8
+	- Build against Mac OSX 10.6
+- removed Soundflowerbed and load.rb from build.rb 
+
+- build Soundflower.kext with 7 Stereo Channels
+- some adapted pathes in Tools
+
+
 #QUICK START
 
 To build Soundflower, open a terminal window and cd to the Soundflower folder.  Then follow these steps:
