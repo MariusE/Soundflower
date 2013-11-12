@@ -1,5 +1,5 @@
 #Hinweis:
-aktuell ist der Code nicht signiert! Daher muss die .kext manuell geladen werden:
+aktuell ist der Code nicht signiert! Daher kann es passieren, dass die .kext manuell geladen werden muss:
 
 `sudo kextload /System/Library/Extensions/Soundflower.kext`
 
