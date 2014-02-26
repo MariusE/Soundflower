@@ -1,10 +1,20 @@
 #Hinweis:
-aktuell ist der Code nicht signiert! Daher muss die .kext manuell geladen werden:
+aktuell ist der Code nicht signiert! Daher muss die .kext eventuell manuell geladen werden:
 
 `sudo kextload /System/Library/Extensions/Soundflower.kext`
 
+- __Weitere Informationen im Blog unter: [http://marius-eisenbraun.de/soundflower-ultraschall-edition/](http://marius-eisenbraun.de/soundflower-ultraschall-edition/)__
+- __Probleme und Nachfragen bitte in die Issues__
+
+
+
 ========
 #Changelog
+## Version 1.0
+- Optimized .kext
+  - Skype Channels are now Mono
+  - removed default Soundflower 2ch
+
 ## Version 0.1-alpha
 - Soundflower 1.6.2 forked
 - xCode Project updated
