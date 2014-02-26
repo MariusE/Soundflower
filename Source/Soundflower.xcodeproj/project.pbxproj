@@ -223,6 +223,7 @@
 				INSTALL_PATH = /../Build;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
+				MODULE_VERSION = 1.0;
 				PRODUCT_NAME = Soundflower;
 				SDKROOT = macosx10.8;
 				WARNING_CFLAGS = (
@@ -251,6 +252,7 @@
 				INSTALL_PATH = /../Build;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = com.Cycling74.driver.Soundflower;
+				MODULE_VERSION = 1.0;
 				PRODUCT_NAME = Soundflower;
 				SDKROOT = macosx10.8;
 				WARNING_CFLAGS = (
