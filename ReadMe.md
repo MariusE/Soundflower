@@ -6,7 +6,8 @@ aktuell ist der Code nicht signiert! Daher muss die .kext eventuell manuell gela
 - __Weitere Informationen im Blog unter: [http://marius-eisenbraun.de/soundflower-ultraschall-edition/](http://marius-eisenbraun.de/soundflower-ultraschall-edition/)__
 - __Probleme und Nachfragen bitte in die Issues__
 
-
+# Download:
+__https://github.com/MariusE/Soundflower-Ultraschall-Edition/releases/download/1.0/Soundflower-1.0.dmg__
 
 ========
 #Changelog
